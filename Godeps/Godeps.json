@@ -16,6 +16,10 @@
 			"Rev": "18ed006d8d42ea3e8d0f14c37bccaff50f23d85e"
 		},
 		{
+			"ImportPath": "github.com/bmizerany/pat",
+			"Rev": "c068ca2f0aacee5ac3681d68e4d0a003b7d1fd2c"
+		},
+		{
 			"ImportPath": "github.com/codegangsta/negroni",
 			"Comment": "v0.1-70-gc7477ad",
 			"Rev": "c7477ad8e330bef55bf1ebe300cf8aa67c492d1b"
@@ -23,14 +27,6 @@
 		{
 			"ImportPath": "github.com/davecgh/go-spew/spew",
 			"Rev": "5215b55f46b2b919f50a1df0eaa5886afe4e3b3d"
-		},
-		{
-			"ImportPath": "github.com/gorilla/context",
-			"Rev": "1c83b3eabd45b6d76072b66b746c20815fb2872d"
-		},
-		{
-			"ImportPath": "github.com/gorilla/mux",
-			"Rev": "48e889f422c9702f924e53b095546239a1253159"
 		},
 		{
 			"ImportPath": "github.com/pmezard/go-difflib/difflib",

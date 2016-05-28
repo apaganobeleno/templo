@@ -1,0 +1,4 @@
+{{ extends "layout.jet" }}
+{{ block documentBody }}
+  <h2> Welcome to Templo </h2>
+{{ end }}
