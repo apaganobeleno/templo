@@ -13,7 +13,7 @@ var port = portWithDefault("3000")
 
 func main() {
 	router := routing.BuildRouter()
-	n := negroni.New(negroni.NewRecovery(), negroni.NewLogger())
+	n := negroni.Classic()
 	n.UseHandler(router)
 
 	log.Printf("| App running on port %v", port)
