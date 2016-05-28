@@ -6,7 +6,7 @@ import (
 	"testing"
 
 	"github.com/CloudyKit/jet"
-	"github.com/gorilla/mux"
+	"github.com/bmizerany/pat"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -16,7 +16,7 @@ func init() {
 }
 
 func TestTemplo(t *testing.T) {
-	router := muxFor("/hi/{name}", Templo)
+	router := muxFor("/hi/:name", Templo)
 	request, _ := http.NewRequest("GET", "/hi/Tony", nil)
 	response := httptest.NewRecorder()
 
@@ -24,8 +24,8 @@ func TestTemplo(t *testing.T) {
 	assert.Contains(t, string(response.Body.Bytes()), "Hello Tony")
 }
 
-func muxFor(path string, handler http.HandlerFunc) *mux.Router {
-	router := mux.NewRouter()
-	router.HandleFunc(path, handler).Methods("GET")
+func muxFor(path string, handler http.HandlerFunc) *pat.PatternServeMux {
+	router := pat.New()
+	router.Get(path, http.HandlerFunc(handler))
 	return router
 }

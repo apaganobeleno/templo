@@ -4,15 +4,11 @@ import (
 	"net/http"
 	"templo/handlers"
 
-	"github.com/gorilla/mux"
+	"github.com/bmizerany/pat"
 )
 
-func BuildRouter() *mux.Router {
-	router := mux.NewRouter()
-
-	router.HandleFunc("/hi/{name}", handlers.Templo).Methods("GET")
-	router.PathPrefix("/assets/").Handler(http.FileServer(http.Dir("./public/")))
-	router.Handle("/", router)
-
+func BuildRouter() *pat.PatternServeMux {
+	router := pat.New()
+	router.Get("/hi/:name", http.HandlerFunc(handlers.Templo))
 	return router
 }
