@@ -8,10 +8,19 @@ Templo is a basic template i've built to develop simple yet powerful Go web appl
 - [Pat](https://github.com/bmizerany/pat) as our mux.
 - [Jet](https://github.com/CloudyKit/jet) to render our html templates.
 - [Godotenv](https://github.com/joho/godotenv) to load env configuration.
+- [Gorm](https://github.com/jinzhu/gorm) for object relational mapping with the DB.
 
 #### App Configuration
 
+Templo application uses some Environment variables we use to make things easier, some of these for development only and others for any environment:
 
+##### DEVELOPMENT
+
+When set to "1" this environment variable sets the development mode active, this will allow you to reload jet templates on each request.
+
+##### DATABASE_URL
+
+Sets the database url for the Gorm database connection.
 
 ------------------
 
