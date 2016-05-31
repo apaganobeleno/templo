@@ -5,15 +5,9 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/CloudyKit/jet"
 	"github.com/bmizerany/pat"
 	"github.com/stretchr/testify/assert"
 )
-
-func init() {
-	//For testing proposes
-	views = jet.NewHTMLSet("../views")
-}
 
 func TestTemplo(t *testing.T) {
 	router := muxFor("/hi/:name", Templo)

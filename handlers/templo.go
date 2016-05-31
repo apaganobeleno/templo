@@ -3,11 +3,7 @@ package handlers
 import (
 	"log"
 	"net/http"
-
-	"github.com/CloudyKit/jet"
 )
-
-var views = jet.NewHTMLSet("./views")
 
 //Templo is a sample handler to show off some of the components of the template
 func Templo(w http.ResponseWriter, r *http.Request) {

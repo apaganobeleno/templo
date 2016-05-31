@@ -5,6 +5,7 @@ import (
 	"net/http"
 )
 
+//Welcome is a basic handler for this templo app
 func Welcome(w http.ResponseWriter, r *http.Request) {
 	view, err := views.GetTemplate("welcome.jet")
 	if err != nil {
