@@ -4,6 +4,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"templo/db"
 	"templo/routing"
 
 	"github.com/codegangsta/negroni"
@@ -13,10 +14,8 @@ import (
 var port = portWithDefault("3000")
 
 func main() {
-	err := godotenv.Load()
-	if err != nil {
-		log.Println("| WARNING: Could not find .env file relaying on system ENV")
-	}
+	loadEnvironmentFromFile()
+	checkDBConnection()
 
 	router := routing.BuildRouter()
 	n := negroni.Classic()
@@ -30,10 +29,25 @@ func main() {
 	http.ListenAndServe(":"+port, n)
 }
 
-func portWithDefault(other string) string {
+func checkDBConnection() {
+	_, err := db.Connection()
+	if err != nil {
+		log.Println("| WARNING: Could not connect to the DATABASE_URL set")
+		log.Printf("| ERROR %v", err.Error())
+	}
+}
+
+func loadEnvironmentFromFile() {
+	err := godotenv.Load()
+	if err != nil {
+		log.Println("| WARNING: Could not find .env file relaying on system ENV")
+	}
+}
+
+func portWithDefault(alternative string) string {
 	port := os.Getenv("PORT")
 	if port == "" {
-		return other
+		return alternative
 	}
 	return port
 }
