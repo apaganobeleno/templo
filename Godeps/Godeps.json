@@ -1,5 +1,5 @@
 {
-	"ImportPath": "templo",
+	"ImportPath": "github.com/apaganobeleno/templo",
 	"GoVersion": "go1.6",
 	"GodepVersion": "v72",
 	"Packages": [
