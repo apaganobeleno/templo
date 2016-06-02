@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/apaganobeleno/templo.svg?style=svg)](https://circleci.com/gh/apaganobeleno/templo)
+
 ## Templo
 
 Templo is a basic template i've built to develop simple yet powerful Go web applications, this template is also used by my team at [Wawandco](https://github.com/wawandco) as a starting point for most of the web apps we build with Go.
