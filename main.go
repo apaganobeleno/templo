@@ -4,8 +4,9 @@ import (
 	"log"
 	"net/http"
 	"os"
-	"templo/db"
-	"templo/routing"
+
+	"github.com/apaganobeleno/templo/db"
+	"github.com/apaganobeleno/templo/routing"
 
 	"github.com/codegangsta/negroni"
 	"github.com/joho/godotenv"

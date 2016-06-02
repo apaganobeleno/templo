@@ -2,8 +2,8 @@ package routing
 
 import (
 	"net/http"
-	"templo/handlers"
 
+	"github.com/apaganobeleno/templo/handlers"
 	"github.com/bmizerany/pat"
 )
 
