@@ -7,9 +7,9 @@ dependencies:
   pre:
     - go get github.com/wawandco/transporter
 
-test:
-  pre:
-    - transporter up circleci
+# test:
+#   pre:
+#     - transporter up circleci
 
 # deployment:
 #   wwco:
