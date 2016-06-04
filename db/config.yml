@@ -1,0 +1,11 @@
+development:
+  driver: postgres
+  url: "postgres://templo:@127.0.0.1:5432/templo"
+
+test:
+  driver: postgres
+  url: "postgres://templo:@127.0.0.1:5432/templo_test"
+
+circleci:
+  driver: postgres
+  url: "postgres://ubuntu:@127.0.0.1:5432/circle_test"
